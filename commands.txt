@@ -1,0 +1,9 @@
+2. Restoring s3 objects from glacier
+     
+    * aws s3api restore-object --bucket s3-glacier-test-89732 --key roses.png --restore-request '{"Days":25,"GlacierJobParameters":{"Tier":"Expedited"}}'
+    *  
+    * aws s3api head-object --bucket s3-glacier-test-89732 --key roses.png
+    *  
+    * aws s3 cp s3://s3-glacier-test-89732/roses.png s3://s3-glacier-test-89732/roses.png --storage-class STANDARD
+    *  
+    * aws s3 cp s3://s3-glacier-test-89732/roses.png .
